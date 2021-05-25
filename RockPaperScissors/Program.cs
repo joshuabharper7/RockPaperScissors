@@ -36,48 +36,51 @@ namespace RockPaperScissors
                         case "R":
                             if (computerGuess == 2)
                             {
-                                Console.WriteLine("You Win!");
+                                Console.Write("You Win!");
                             }
                             else if (computerGuess == 1)
                             {
-                                Console.WriteLine("You Lose!");
+                                Console.Write("You Lose!");
                             }
                             else if (computerGuess == 0)
                             {
-                                Console.WriteLine("Tie Game.");
+                                Console.Write("Tie Game.");
                             }
+                            Console.WriteLine(" The computer chose " + NumberToString(computerGuess));
                             stillPlaying = false;
                             break;
                         case "PAPER":
                         case "P":
                             if (computerGuess == 2)
                             {
-                                Console.WriteLine("You Lose!");
+                                Console.Write("You Lose!");
                             }
                             else if (computerGuess == 1)
                             {
-                                Console.WriteLine("Tie Game.");
+                                Console.Write("Tie Game.");
                             }
                             else if (computerGuess == 0)
                             {
-                                Console.WriteLine("You Win!");
+                                Console.Write("You Win!");
                             }
+                            Console.WriteLine(" The computer chose " + NumberToString(computerGuess));
                             stillPlaying = false;
                             break;
                         case "SCISSORS":
                         case "S":
                             if (computerGuess == 2)
                             {
-                                Console.WriteLine("Tie Game.");
+                                Console.Write("Tie Game.");
                             }
                             else if (computerGuess == 1)
                             {
-                                Console.WriteLine("You Win!");
+                                Console.Write("You Win!");
                             }
                             else if (computerGuess == 0)
                             {
-                                Console.WriteLine("You Lose!");
+                                Console.Write("You Lose!");
                             }
+                            Console.WriteLine(" The computer chose " + NumberToString(computerGuess));
                             stillPlaying = false;
                             break;
                         default:
@@ -109,6 +112,20 @@ namespace RockPaperScissors
                 }
 
 
+            }
+            static string NumberToString(int computerResponse)
+            {
+                switch (computerResponse)
+                {
+                    case 0:
+                        return "Rock";
+                    case 1:
+                        return "Paper";
+                    case 2:
+                        return "Scissors";
+                    default:
+                        return "Undefined";
+                }
             }
         }
     }
